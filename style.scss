@@ -1,0 +1,97 @@
+/*
+ * specificity when there are conflicts in styling
+ *
+ * inline
+ * id
+ * class
+ * type
+*/
+
+$main-color: rgb(22, 145, 22);
+
+/* response design */
+@media (max-width: 600px) { /* changes color when screen is narrower than 600px */
+    body {
+        background-color: red;
+    }
+}
+
+/* flexbox */
+#container { /* automatically puts things onto more rows when screen is narrower */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#container > div {
+    background-color: springgreen;
+    margin: 20px;
+    padding: 20px;
+    width: 400px;
+}
+
+/* grid */
+#grid {
+    background-color: darkgreen;
+    display: grid;
+    padding: 20px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-item {
+    background-color: white;
+    padding: 20px;
+    width: 450px;
+}
+
+h1 {
+    color: $main-color;
+    text-align: center;
+    font-family: monospace;
+    font-size: 50px;
+}
+
+h2 {
+    color: $main-color;
+}
+
+table {
+    width: 400px;
+    height: 200px;
+    padding: 10px; /* this is how much space between inner text and edge of box */
+    margin: 20px; /* this is how much space between edge of box and edge of page */
+    border-collapse: collapse;
+}
+
+thead {
+    font-weight: bold;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+/* only when mouse is hovering over h1 */
+h1:hover {
+    color:blueviolet;
+}
+
+form {
+    background-color: $main-color;
+    width: 500px;
+    height: 200px;
+}
+
+/* ids have to be unique */
+#nonsense {
+    font-style: italic;
+    color: rgb(235, 77, 103);
+}
+
+/* there can be multiple classes */
+.hehe {
+    color:rgb(175, 42, 192);
+    font-weight: bold;
+}

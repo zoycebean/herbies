@@ -7,91 +7,117 @@
  * type
 */
 
-$main-color: rgb(22, 145, 22);
-
 /* response design */
 @media (max-width: 600px) { /* changes color when screen is narrower than 600px */
     body {
-        background-color: red;
+      background-color: red;
     }
-}
-
-/* flexbox */
-#container { /* automatically puts things onto more rows when screen is narrower */
+  }
+  /* flexbox */
+  #container { /* automatically puts things onto more rows when screen is narrower */
     display: flex;
     flex-wrap: wrap;
-}
-
-#container > div {
+  }
+  
+  #container > div {
     background-color: springgreen;
     margin: 20px;
     padding: 20px;
     width: 400px;
-}
-
-/* grid */
-#grid {
+  }
+  
+  /* grid */
+  #grid {
     background-color: darkgreen;
     display: grid;
     padding: 20px;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     grid-template-columns: auto auto auto;
-}
-
-.grid-item {
+  }
+  
+  .grid-item {
     background-color: white;
     padding: 20px;
     width: 450px;
-}
-
-h1 {
-    color: $main-color;
+  }
+  
+  h1 {
+    color: rgb(22, 145, 22);
     text-align: center;
     font-family: monospace;
     font-size: 50px;
-}
-
-h2 {
-    color: $main-color;
-}
-
-table {
+  }
+  
+  h2 {
+    color: rgb(22, 145, 22);
+  }
+  
+  table {
     width: 400px;
     height: 200px;
     padding: 10px; /* this is how much space between inner text and edge of box */
     margin: 20px; /* this is how much space between edge of box and edge of page */
     border-collapse: collapse;
-}
-
-thead {
+  }
+  
+  thead {
     font-weight: bold;
-}
-
-td, th {
+  }
+  
+  td, th {
     border: 1px solid black;
     padding: 10px;
-}
-
-/* only when mouse is hovering over h1 */
-h1:hover {
-    color:blueviolet;
-}
-
-form {
-    background-color: $main-color;
+  }
+  
+  /* only when mouse is hovering over h1 */
+  h1:hover {
+    color: blueviolet;
+  }
+  
+  .mailing-list {
+    background-color: rgb(22, 145, 22);
     width: 500px;
     height: 200px;
-}
-
-/* ids have to be unique */
-#nonsense {
+  }
+  
+  /* ids have to be unique */
+  #nonsense {
     font-style: italic;
     color: rgb(235, 77, 103);
-}
-
-/* there can be multiple classes */
-.hehe {
-    color:rgb(175, 42, 192);
+  }
+  
+  /* there can be multiple classes */
+  .submit-button {
+    background-color: rgb(22, 145, 22);
+  
+    color: white;
     font-weight: bold;
-}
+  }
+  
+  .socials {
+    height: 40px;
+    width: 200px;
+    border-radius: 10px;
+    border-style: none;
+    background-color:rgb(22, 145, 22);
+    color: white;
+    font-size: 12px;
+    font-family: monospace;
+    cursor: pointer;
+  }
+  
+  .socials:hover {
+    opacity: 0.8;
+  }
+  
+  .socials:active {
+    opacity: 0.6;
+  }
+  
+  .side-by-side {
+    display: inline;
+  }
+  
+  /*# sourceMappingURL=style.css.map */
+  

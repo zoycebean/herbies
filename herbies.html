@@ -9,11 +9,11 @@
         sass --watch style.sccs:style.css-->
         <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <body class="body-style">
     <h1>welcome to herbies!</h1>
-    <h4 style="text-align: center">herbies is an inclusive space at swarthmore for anyone interested in a plant-based diet!</h4>
-        <div>
-            <h2>our events</h2> <!--headings go until h6-->
+    <h4 class="title-description">herbies is an inclusive space at swarthmore for anyone interested in a plant-based diet</h4>
+        <div class="events-div">
+            <h2>recent events</h2> <!--headings go until h6-->
             <table>
                 <thead> <!--heading of table-->
                     <th>event name</th> <!--th = table head-->
@@ -50,52 +50,62 @@
             </table>
         </div>
 
-        <h2>chocolate chip</h2>
-        <h3>ingredients</h3>
-        <ul> <!--unordered list-->
-            <li>dairy-free chocolate chips</li> <!--item in a list-->
-            <li>flour</li>
-            <li id="nonsense">lots of luv & trust</li> <!--ID HAS TO BE UNIQUE!!!-->
-        </ul>
-        <h3>instructions</h3>
-        <ol> <!--ordered list-->
-            <li>mix flour with lov</li>
-            <li>push chocolate chips into dough and bake at 100F trust</li>
-        </ol>
-        <!--insert image: source file, alternative text, width (in pixels)-->
-        <img src="big-cookie.png" alt="ameels showing off big cookie" width="500">
-        <!--link to another webpage-->
-        
+        <div class="choc-chip-div">
+            <div class="no-block">
+                <h2>chocolate chip</h2>
+                <h3>ingredients</h3>
+                <ul> <!--unordered list-->
+                    <li>dairy-free chocolate chips</li> <!--item in a list-->
+                    <li>flour</li>
+                    <li>lots of <span class ="love">luv</span> & trust</li>
+                </ul>
+                <h3>instructions</h3>
+                <ol> <!--ordered list-->
+                    <li>mix flour with <span class ="love">luv</span></li>
+                    <li>push chocolate chips into dough and bake at 100F trust</li>
+                </ol>
+
+                <form action="https://bakerbynature.com/the-most-wonderful-vegan-chocolate-chip-cookies-ever/"
+                target="_blank">
+                    <input class="recipe-button" type="submit" value="view actual recipe">
+                </form>
+            </div>
+            <!--insert image: source file, alternative text, width (in pixels)-->
+            <img class="big-cookie" src="big-cookie.png" alt="ameels showing off big cookie">
+            <!--link to another webpage-->
+        </div>
+
+
         <h2>gallery</h2>
-        <div id="grid">
-            <div class=".grid-item">
-                <img src="baked-icecream.png" width="400">
+        <div class="container">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="baked-icecream.png" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="earthling-ed.png" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="earthling-ed.png" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="ig-cookie.PNG" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="ig-cookie.PNG" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="nathan-dog.HEIC" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="nathan-dog.HEIC" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="intro-picnic.png" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="intro-picnic.png" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="maddie-cookie.png" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="maddie-cookie.png" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="vegandale-group.png" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="vegandale-group.png" width="400">
             </div>
-            <div class=".grid-item">
-                <img src="taco-night.png" width="400">
+            <div class="gallery-image">
+                <img class="gallery-image-img" src="taco-night.png" width="400">
             </div>
         </div>
 
         <h2>past events</h2>
-        <div id="container">
+        <div class="container">
             <div>
                 <img src="baking-poster.JPEG" width="400">
             </div>
@@ -104,39 +114,48 @@
             </div>
         </div>
         
-        <h2>contact us!</h2>
-        <a href="https://www.instagram.com/herbies_swatties/" class="hehe">follow us on instagram!</a><br>
-        <a href="">join our whatsapp group chat</a>
-        <form>
-            <h3>join our mailing list!</h3>
-            <div>
-                enter your name:
-                <input type="text" placeholder="name" name="name"> <!--text answer--> <br>
-                enter a secret message:
-                <input type="password" placeholder="secret message"
-                message="message"> <!-- hidden answer-->
-            </div>
-            <div>
-                class year:
-                <input type="radio" name="classyear" value="green">2023 <!--mcq buttons-->
-                <input type="radio" name="classyear">2024
-                <input type="radio" name="classyear">2025
-                <input type="radio" name="classyear">2026
-            </div>
-            <div>
-                what do you identify as?
-                <!--dropdown menu, list = datalist id-->
-                <input name="diet status" list="diet options" placeholder="select one...">
-                <datalist id="diet options"> <!--menu options-->
-                    <option value="vegan">
-                    <option value="vegetarian">
-                    <option value="pescatarian">
-                    <option value="omnivore">
-                    <option value="other">
-                </datalist>
-            </div>
-            <input type="text" placeholder="email" email="email">
-            <input class="hehe" type="submit">
-        </form>
+        <div class="contacts-page">
+            <h2 id="contact-id">contact us!</h2>
+            <form action="https://www.instagram.com/herbies_swatties/" target="_blank" class="socials">
+                <input class="instagram-button" type="submit" value="follow us on instagram!">
+            </form>
+            <form action="https://chat.whatsapp.com/FCJJEzjnuc4Gro9Y3k71Ca" target="_blank" class="socials">
+                <input class="whatsapp-button" type="submit" value="join our whatsapp group chat">
+            </form>
+            <form class="mailing-list" action="mailing-list-submission-page.html">
+                <h3 class="mailing-list-text">join our mailing list!</h3>
+                <div>
+                    enter your name:
+                    <input type="text" placeholder="name" name="name"> <!--text answer--> <br>
+                    enter a secret message:
+                    <input type="password" placeholder="secret message"
+                    message="message"> <!-- hidden answer-->
+                </div>
+                <div>
+                    class year:
+                    <input type="radio" name="classyear" value="green">2023 <!--mcq buttons-->
+                    <input type="radio" name="classyear">2024
+                    <input type="radio" name="classyear">2025
+                    <input type="radio" name="classyear">2026
+                </div>
+                <div>
+                    what do you identify as?
+                    <!--dropdown menu, list = datalist id-->
+                    <input name="diet status" list="diet options" placeholder="select one...">
+                    <datalist id="diet options"> <!--menu options-->
+                        <option value="vegan">
+                        <option value="vegetarian">
+                        <option value="pescatarian">
+                        <option value="omnivore">
+                        <option value="other">
+                    </datalist>
+                </div>
+                enter your email:
+                <input type="text" placeholder="email" email="email"></br>
+                <div class="centered-div">
+                    <input class="submit-button" type="submit">
+                </div>
+            </form>
+        </div>
     </body>
 </html>

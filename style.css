@@ -6,6 +6,7 @@
  * class
  * type
 */
+
 /* response design */
 @media (max-width: 600px) { /* changes color when screen is narrower than 600px */
   body {
@@ -13,16 +14,19 @@
   }
 }
 /* flexbox */
-#container { /* automatically puts things onto more rows when screen is narrower */
+.container { /* automatically puts things onto more rows when screen is narrower */
   display: flex;
   flex-wrap: wrap;
 }
 
-#container > div {
-  background-color: springgreen;
+.gallery-image {
   margin: 20px;
-  padding: 20px;
+}
+
+.gallery-image-img {
+  object-fit: cover;
   width: 400px;
+  height: 400px;
 }
 
 /* grid */
@@ -41,15 +45,93 @@
   width: 450px;
 }
 
+.body-style {
+  margin: 50px;
+  background-color:rgba(97, 191, 63, 0.2);
+}
+
+.events-div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+}
+
+.choc-chip-div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 40px;
+}
+
+.no-block {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.title-description {
+  margin-bottom: 50px;
+}
+
+.recipe-button {
+  background-color: rgb(121, 189, 121);
+  color: white;
+  font-family: monospace;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  border-style: none;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.recipe-button:hover {
+  box-shadow: 3px 3px 2px rgba(22, 145, 22, 0.346);
+}
+
 h1 {
   color: rgb(22, 145, 22);
   text-align: center;
-  font-family: monospace;
-  font-size: 50px;
+  font-family: Courier;
+  font-weight: bold;
+  font-size: 60px;
+  margin-bottom: 0px;
 }
 
 h2 {
+  font-family: monospace;
+  text-align: left;
+  font-weight: bold;
   color: rgb(22, 145, 22);
+  margin-left: 20px;
+  margin-top: 40px;
+}
+
+h3 {
+  margin-top: 0px;
+  margin-left: 20px;
+  font-family: monospace;
+  color:rgb(22, 145, 22);
+  font-style: italic;
+}
+
+h4 {
+  text-align: center;
+  font-family: monospace;
+  margin-top: 10px;
+}
+
+li {
+  font-family: Arial;
+}
+
+.love:hover {
+  text-decoration: underline;
+  color: rgb(202, 92, 111);
+  cursor: not-allowed;
 }
 
 table {
@@ -62,34 +144,118 @@ table {
 
 thead {
   font-weight: bold;
+  font-family: Arial;
 }
 
 td, th {
-  border: 1px solid black;
+  border: 1px solid rgb(22, 145, 22);
   padding: 10px;
-}
-
-/* only when mouse is hovering over h1 */
-h1:hover {
-  color: blueviolet;
-}
-
-form {
-  background-color: rgb(22, 145, 22);
-  width: 500px;
-  height: 200px;
-}
-
-/* ids have to be unique */
-#nonsense {
-  font-style: italic;
-  color: rgb(235, 77, 103);
+  font-family: Arial;
 }
 
 /* there can be multiple classes */
-.hehe {
-  color: rgb(175, 42, 192);
+.submit-button {
+  background-color: white;
+  color: rgb(22, 145, 22);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 3px;
   font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+  transition: background-color .3s, color .3s;
+}
+
+.submit-button:hover {
+  background-color:rgb(22, 145, 22);
+  color: white;
+  border-color: white;
+  border-style: solid;
+  cursor: pointer;
+}
+
+/* ids have to be unique */
+#contact-id {
+  margin-top: 20px;
+}
+
+.contacts-page {
+  background-color:rgba(22, 145, 22, 0);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 40%;
+  border-color:rgb(22, 145, 22);
+  border-style: solid;
+  padding-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.mailing-list {
+  font-family: monospace;
+  background-color: rgb(22, 145, 22);
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.mailing-list-text {
+  color: white;
+  margin-left: 0px;
+}
+
+.centered-div {
+  text-align: center;
+}
+
+.instagram-button, .whatsapp-button {
+  border-radius: 10px;
+  border-style: none;
+  background-color:rgb(22, 145, 22);
+  color: white;
+  font-size: 12px;
+  font-family: monospace;
+  cursor: pointer;
+  transition: opacity 0.5s;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
+.socials > input:hover {
+  opacity: 0.8;
+}
+
+.socials > input:active {
+  opacity: 0.6;
+}
+
+.socials {
+  display: inline;
+  align-content: center;
+}
+
+/* IMAGE STYLING*/
+
+.big-cookie {
+  transition: border-radius .5s;
+  width: 260px;
+  margin-left: 40px;
+}
+
+.big-cookie:hover {
+  cursor: pointer;
+  border-radius: 200px;
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */

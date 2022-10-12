@@ -13,6 +13,7 @@
     background-color: red;
   }
 }
+
 /* flexbox */
 .gallery-container { /* automatically puts things onto more rows when screen is narrower */
   display: flex;
@@ -20,25 +21,39 @@
 }
 
 .gallery-div {
-  margin: 20px;
+  max-width: 400px;
+  max-height: 400px;
 }
 
 .gallery-image {
-  object-fit: cover;
-  width: 400px;
-  height: 400px;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+}
+
+/* using grid to style gallery*/
+.gallery-grid {
+  --gap: 20px;
+  --num-cols: 3;
+  --row-height: 400px;
+  gap: var(--gap);
+
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .gallery-image:hover {
   opacity: 0.3;
-}
-
-.image-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 18px;
+  cursor: pointer;
 }
 
 .poster-container {

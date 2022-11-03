@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"> <!--these are called tags, lang is an attribute-->
+    <head>
+        <title>herbies! yayy</title>
+        <!--if using sass, must first compile into css by typing in command line:
+        sass style.sccs:style.css
+        then use style.css below to apply to this page-->
+        <!--instead of recompiling everytime we make changes to style.scss, we can use:
+        sass --watch style.sccs:style.css-->
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js"></script>
+    </head>
+    <body class="body-style">
+        <h1>welcome to herbies!</h1>
+        <h4 class="title-description">herbies is an inclusive space at swarthmore for anyone interested in a plant-based diet</h4>
+    
+        <div class="events-div">
+            <h2>recent events</h2> <!--headings go until h6-->
+            <table>
+                <thead> <!--heading of table-->
+                    <th>event name</th> <!--th = table head-->
+                    <th>date</th>
+                    <th>turnout</th>
+                </thead>
+                <tbody>
+                    <tr> <!--tr = table row-->
+                        <td>intro picnic</td> <!--table data-->
+                        <td>sep 8</td>                        <td>~20</td>
+                    </tr>
+                    <tr>
+                        <td>taco night</td>
+                        <td>sep 16</td>
+                        <td>11</td>
+                    </tr>
+                    <tr>
+                        <td>vegandale @nyc!</td>
+                        <td>sep 24</td>                        <td>19</td>
+                    </tr>
+                    <tr>
+                        <td>baking & movie night</td>
+                        <td>oct 3</td>
+                        <td>~19</td>
+                    </tr>
+                    <tr>
+                        <td>earthling ed speaker event</td>
+                        <td>oct 6</td>
+                        <td>~15</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div>
+            <h2>post your thoughts here!</h2>
+            <p id="thoughts-board"></p>
+            <form id="thoughts-form">
+                <input id="new-thought" placeholder="your thoughts" type="text">
+                <input id="thought-submit" type="submit">
+            </form>
+        </div>
+
+        <div class="choc-chip-div">
+            <div class="no-block">
+                <h2>chocolate chip</h2>
+                <h3>ingredients</h3>
+                <ul> <!--unordered list-->
+                    <li>dairy-free chocolate chips</li> <!--item in a list-->
+                    <li>flour</li>
+                    <li>lots of <span class ="love">luv</span> & trust</li>
+                </ul>
+                <h3>instructions</h3>
+                <ol> <!--ordered list-->
+                    <li>mix flour with <span class ="love">luv</span></li>
+                    <li>push chocolate chips into dough and bake at 100F trust</li>
+                </ol>
+
+                <form action="https://bakerbynature.com/the-most-wonderful-vegan-chocolate-chip-cookies-ever/"
+                target="_blank">
+                    <input class="recipe-button" type="submit" value="view actual recipe">
+                </form>
+            </div>
+            <!--insert image: source file, alternative text, width (in pixels)-->
+            <img class="big-cookie" src="images/big-cookie.png" alt="ameels showing off big cookie">
+            <!--link to another webpage-->
+        </div>
+
+
+        <h2 class="subheading">gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/baked-icecream.png">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/earthling-ed.png">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/ig-cookie.PNG">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/nathan-dog.HEIC">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/intro-picnic.png">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/maddie-cookie.png">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/vegandale-group.png">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/taco-night.png">
+            </div>
+            <div class="gallery-div">
+                <img class="gallery-image" src="images/vegandale-nappers.png">
+            </div>
+        </div>
+
+        <h2 class="subheading">past events</h2>
+        <div class="poster-container">
+            <div class="poster-div">
+                <img class="poster-image" src="images/baking-poster.JPEG" width="400">
+            </div>
+            <div class="poster-div">
+                <img class="poster-image" src="images/earthling-poster.jpg" width="400">
+            </div>
+        </div>
+        
+        <div class="contacts-page">
+            <h2 id="contact-id">contact us!</h2>
+            <form action="https://www.instagram.com/herbies_swatties/" target="_blank" class="socials">
+                <input class="instagram-button" type="submit" value="follow us on instagram!">
+            </form>
+            <form action="https://chat.whatsapp.com/FCJJEzjnuc4Gro9Y3k71Ca" target="_blank" class="socials">
+                <input class="whatsapp-button" type="submit" value="join our whatsapp group chat">
+            </form>
+            <form class="mailing-list" action="mailing-list-submission-page.html">
+                <h3 class="mailing-list-text">join our mailing list!</h3>
+                <div>
+                    enter your name:
+                    <input type="text" placeholder="name" name="name"> <!--text answer--> <br>
+                    enter a secret message:
+                    <input type="password" placeholder="secret message"
+                    message="message"> <!-- hidden answer-->
+                </div>
+                <div>
+                    class year:
+                    <input type="radio" name="classyear" value="green">2023 <!--mcq buttons-->
+                    <input type="radio" name="classyear">2024
+                    <input type="radio" name="classyear">2025
+                    <input type="radio" name="classyear">2026
+                </div>
+                <div>
+                    what do you identify as?
+                    <!--dropdown menu, list = datalist id-->
+                    <input name="diet status" list="diet options" placeholder="select one...">
+                    <datalist id="diet options"> <!--menu options-->
+                        <option value="vegan">
+                        <option value="vegetarian">
+                        <option value="pescatarian">
+                        <option value="omnivore">
+                        <option value="other">
+                    </datalist>
+                </div>
+                enter your email:
+                <input type="text" placeholder="email" email="email"></br>
+                <div class="centered-div">
+                    <input class="submit-button" type="submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

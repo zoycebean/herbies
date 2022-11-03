@@ -14,6 +14,14 @@
   }
 }
 
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
 /* flexbox */
 .gallery-container { /* automatically puts things onto more rows when screen is narrower */
   display: flex;
@@ -198,6 +206,10 @@ td, th {
   border: 1px solid rgb(22, 145, 22);
   padding: 10px;
   font-family: Arial;
+}
+
+#new-thought {
+  margin-left: 20px;
 }
 
 /* there can be multiple classes */
